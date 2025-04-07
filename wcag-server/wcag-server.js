@@ -133,18 +133,22 @@ class WcagServer {
           
           criteria.forEach(criterion => {
             criterionNumber++;
-            
-            // Get criterion ID and title
-            const criterionId = criterion.id;
-            const criterionTitle = criterion.querySelector('h4')?.textContent?.trim() || '';
-            
+
+            const includePath = criterion.getAttribute('data-include');
+            const criterionId = includePath.split('/').pop().split('.')[0];
+
+            console.error(`[Criterion] ID: ${criterionId}`);
+
+            const scData = criteriaData.criteria?.find(c => c.id === criterionId);
+            const scDom = new JSDOM(scData?.content || '');
+            const sc = scDom.window.document.querySelector('section.sc');
+            const scTitle = sc.querySelector('h4')?.textContent?.trim() || '';
+
             // Format the criterion number (e.g., 1.1.1)
             const criterionNumberFormatted = `${principleNumber}.${guidelineNumber}.${criterionNumber}`;
-
-            console.error('hoge', criterionNumberFormatted, criterionTitle);
             
             // Add criterion to markdown with link
-            markdown += `- [${criterionNumberFormatted} ${criterionTitle}](wcag://criteria/${criterionId})\n`;
+            markdown += `- [${criterionNumberFormatted} ${scTitle}](wcag://criteria/${criterionId})\n`;
           });
           
           markdown += '\n';
