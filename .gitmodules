@@ -1,0 +1,3 @@
+[submodule "wcag"]
+	path = wcag
+	url = git@github.com:w3c/wcag.git
