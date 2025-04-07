@@ -60,12 +60,12 @@ Replace `${PROJECT_PATH}` with the actual path to your project directory.
 
 ### Resource Templates
 
-- `wcag://criteria/{version}/{criterion-id}` - WCAG Success Criterion
-  - Example: `wcag://criteria/22/accessible-authentication-minimum`
-- `wcag://understanding/{version}/{criterion-id}` - WCAG Understanding Document
-  - Example: `wcag://understanding/22/accessible-authentication-minimum`
-- `wcag://techniques/{technology}/{technique-id}` - WCAG Technique
-  - Example: `wcag://techniques/html/H44`
+- `wcag://criteria/{criterion-id}` - WCAG Success Criterion
+  - Example: `wcag://criteria/accessible-authentication-minimum`
+- `wcag://understanding/{criterion-id}` - WCAG Understanding Document
+  - Example: `wcag://understanding/accessible-authentication-minimum`
+- `wcag://techniques/{technique-id}` - WCAG Technique
+  - Example: `wcag://techniques/H44`
 
 ## Usage Examples
 
@@ -79,21 +79,21 @@ console.log(response.contents[0].text);
 ### Accessing a Success Criterion
 
 ```javascript
-const response = await client.readResource('wcag://criteria/22/accessible-authentication-minimum');
+const response = await client.readResource('wcag://criteria/accessible-authentication-minimum');
 console.log(response.contents[0].text);
 ```
 
 ### Accessing an Understanding Document
 
 ```javascript
-const response = await client.readResource('wcag://understanding/22/accessible-authentication-minimum');
+const response = await client.readResource('wcag://understanding/accessible-authentication-minimum');
 console.log(response.contents[0].text);
 ```
 
 ### Accessing a Technique
 
 ```javascript
-const response = await client.readResource('wcag://techniques/html/H44');
+const response = await client.readResource('wcag://techniques/H44');
 console.log(response.contents[0].text);
 ```
 
