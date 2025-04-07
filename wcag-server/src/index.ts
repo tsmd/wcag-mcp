@@ -74,19 +74,19 @@ class WcagServer {
     this.server.setRequestHandler(ListResourceTemplatesRequestSchema, async () => ({
       resourceTemplates: [
         {
-          uriTemplate: 'wcag://criteria/{version}/{criterion-id}',
+          uriTemplate: 'wcag://criteria/{criterion-id}',
           name: 'WCAG Success Criterion',
           mimeType: 'text/html',
           description: 'A specific WCAG success criterion',
         },
         {
-          uriTemplate: 'wcag://understanding/{version}/{criterion-id}',
+          uriTemplate: 'wcag://understanding/{criterion-id}',
           name: 'WCAG Understanding Document',
           mimeType: 'text/html',
           description: 'Understanding document for a specific WCAG success criterion',
         },
         {
-          uriTemplate: 'wcag://techniques/{technology}/{technique-id}',
+          uriTemplate: 'wcag://techniques/{technique-id}',
           name: 'WCAG Technique',
           mimeType: 'text/html',
           description: 'A specific WCAG technique',
@@ -116,11 +116,11 @@ class WcagServer {
         }
         
         // Handle success criteria
-        const criteriaMatch = uri.match(/^wcag:\/\/criteria\/(\d+)\/(.+)$/);
+        const criteriaMatch = uri.match(/^wcag:\/\/criteria\/(.+)$/);
         if (criteriaMatch) {
-          const [, version, criterionId] = criteriaMatch;
-          console.error(`[Criteria] Version: ${version}, ID: ${criterionId}`);
-          const content = await this.readCriterion(version, criterionId);
+          const [, criterionId] = criteriaMatch;
+          console.error(`[Criteria] ID: ${criterionId}`);
+          const content = await this.findCriterion(criterionId);
           return {
             contents: [
               {
@@ -133,11 +133,11 @@ class WcagServer {
         }
         
         // Handle understanding documents
-        const understandingMatch = uri.match(/^wcag:\/\/understanding\/(\d+)\/(.+)$/);
+        const understandingMatch = uri.match(/^wcag:\/\/understanding\/(.+)$/);
         if (understandingMatch) {
-          const [, version, criterionId] = understandingMatch;
-          console.error(`[Understanding] Version: ${version}, ID: ${criterionId}`);
-          const content = await this.readUnderstanding(version, criterionId);
+          const [, criterionId] = understandingMatch;
+          console.error(`[Understanding] ID: ${criterionId}`);
+          const content = await this.findUnderstanding(criterionId);
           return {
             contents: [
               {
@@ -150,11 +150,11 @@ class WcagServer {
         }
         
         // Handle techniques
-        const techniqueMatch = uri.match(/^wcag:\/\/techniques\/([^/]+)\/([^/]+)$/);
+        const techniqueMatch = uri.match(/^wcag:\/\/techniques\/([^/]+)$/);
         if (techniqueMatch) {
-          const [, technology, techniqueId] = techniqueMatch;
-          console.error(`[Technique] Technology: ${technology}, ID: ${techniqueId}`);
-          const content = await this.readTechnique(technology, techniqueId);
+          const [, techniqueId] = techniqueMatch;
+          console.error(`[Technique] ID: ${techniqueId}`);
+          const content = await this.findTechnique(techniqueId);
           return {
             contents: [
               {
@@ -195,44 +195,141 @@ class WcagServer {
   }
 
   /**
-   * Read a success criterion from the WCAG repository
+   * Find a success criterion across all versions
    */
-  private async readCriterion(version: string, criterionId: string): Promise<string> {
-    try {
-      const filePath = path.join(this.wcagBasePath, `guidelines/sc/${version}/${criterionId}.html`);
-      console.error(`[File] Reading: ${filePath}`);
-      return fs.readFileSync(filePath, 'utf-8');
-    } catch (error) {
-      console.error(`[Error] Failed to read criterion: ${error}`);
-      throw error;
+  private async findCriterion(criterionId: string): Promise<string> {
+    // Available versions
+    const versions = ['20', '21', '22'];
+    
+    for (const version of versions) {
+      try {
+        const filePath = path.join(this.wcagBasePath, `guidelines/sc/${version}/${criterionId}.html`);
+        console.error(`[File] Trying: ${filePath}`);
+        
+        if (fs.existsSync(filePath)) {
+          console.error(`[File] Found criterion in version ${version}`);
+          return fs.readFileSync(filePath, 'utf-8');
+        }
+      } catch (error) {
+        console.error(`[Error] Error checking version ${version}: ${error}`);
+        // Continue to next version
+      }
     }
+    
+    // If we get here, the criterion was not found in any version
+    throw new McpError(
+      ErrorCode.InvalidRequest,
+      `Criterion not found: ${criterionId}`
+    );
   }
 
   /**
-   * Read an understanding document from the WCAG repository
+   * Find an understanding document across all versions
    */
-  private async readUnderstanding(version: string, criterionId: string): Promise<string> {
-    try {
-      const filePath = path.join(this.wcagBasePath, `understanding/${version}/${criterionId}.html`);
-      console.error(`[File] Reading: ${filePath}`);
-      return fs.readFileSync(filePath, 'utf-8');
-    } catch (error) {
-      console.error(`[Error] Failed to read understanding document: ${error}`);
-      throw error;
+  private async findUnderstanding(criterionId: string): Promise<string> {
+    // Available versions
+    const versions = ['20', '21', '22'];
+    
+    for (const version of versions) {
+      try {
+        const filePath = path.join(this.wcagBasePath, `understanding/${version}/${criterionId}.html`);
+        console.error(`[File] Trying: ${filePath}`);
+        
+        if (fs.existsSync(filePath)) {
+          console.error(`[File] Found understanding document in version ${version}`);
+          return fs.readFileSync(filePath, 'utf-8');
+        }
+      } catch (error) {
+        console.error(`[Error] Error checking version ${version}: ${error}`);
+        // Continue to next version
+      }
     }
+    
+    // If we get here, the understanding document was not found in any version
+    throw new McpError(
+      ErrorCode.InvalidRequest,
+      `Understanding document not found: ${criterionId}`
+    );
   }
 
   /**
-   * Read a technique from the WCAG repository
+   * Find a technique based on its ID prefix
    */
-  private async readTechnique(technology: string, techniqueId: string): Promise<string> {
+  private async findTechnique(techniqueId: string): Promise<string> {
+    // Map of technique ID prefixes to technology directories
+    const TECHNIQUE_PREFIX_MAP: Record<string, string> = {
+      'ARIA': 'aria',
+      'C': 'css',
+      'F': 'failures',
+      'FLASH': 'flash',
+      'G': 'general',
+      'H': 'html',
+      'PDF': 'pdf',
+      'SCR': 'client-side-script',
+      'SL': 'silverlight',
+      'SM': 'smil',
+      'SVR': 'server-side-script',
+      'T': 'text'
+    };
+    
+    // Extract the prefix from the technique ID
+    let prefix = '';
+    if (techniqueId.startsWith('ARIA')) {
+      prefix = 'ARIA';
+    } else if (techniqueId.startsWith('FLASH')) {
+      prefix = 'FLASH';
+    } else if (techniqueId.startsWith('PDF')) {
+      prefix = 'PDF';
+    } else if (techniqueId.startsWith('SCR')) {
+      prefix = 'SCR';
+    } else if (techniqueId.startsWith('SL')) {
+      prefix = 'SL';
+    } else if (techniqueId.startsWith('SM')) {
+      prefix = 'SM';
+    } else if (techniqueId.startsWith('SVR')) {
+      prefix = 'SVR';
+    } else if (/^[A-Z]/.test(techniqueId)) {
+      // If it starts with a capital letter, the first letter is the prefix
+      prefix = techniqueId.charAt(0);
+    } else {
+      throw new McpError(
+        ErrorCode.InvalidRequest,
+        `Invalid technique ID format: ${techniqueId}`
+      );
+    }
+    
+    // Look up the technology directory
+    const technology = TECHNIQUE_PREFIX_MAP[prefix];
+    if (!technology) {
+      throw new McpError(
+        ErrorCode.InvalidRequest,
+        `Unknown technique prefix: ${prefix}`
+      );
+    }
+    
+    console.error(`[Technique] Prefix: ${prefix}, Technology: ${technology}`);
+    
     try {
       const filePath = path.join(this.wcagBasePath, `techniques/${technology}/${techniqueId}.html`);
       console.error(`[File] Reading: ${filePath}`);
-      return fs.readFileSync(filePath, 'utf-8');
+      
+      if (fs.existsSync(filePath)) {
+        return fs.readFileSync(filePath, 'utf-8');
+      } else {
+        throw new McpError(
+          ErrorCode.InvalidRequest,
+          `Technique not found: ${techniqueId}`
+        );
+      }
     } catch (error) {
+      if (error instanceof McpError) {
+        throw error;
+      }
       console.error(`[Error] Failed to read technique: ${error}`);
-      throw error;
+      throw new McpError(
+        ErrorCode.InternalError,
+        `Failed to read technique: ${error instanceof Error ? error.message : String(error)}`
+      );
     }
   }
 

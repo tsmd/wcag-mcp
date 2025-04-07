@@ -52,13 +52,13 @@ setTimeout(async () => {
     await testReadResource(serverProcess, 'wcag://principles-guidelines');
     
     // Test reading a success criterion
-    await testReadResource(serverProcess, 'wcag://criteria/22/accessible-authentication-minimum');
+    await testReadResource(serverProcess, 'wcag://criteria/accessible-authentication-minimum');
     
     // Test reading an understanding document
-    await testReadResource(serverProcess, 'wcag://understanding/22/accessible-authentication-minimum');
+    await testReadResource(serverProcess, 'wcag://understanding/accessible-authentication-minimum');
     
     // Test reading a technique
-    await testReadResource(serverProcess, 'wcag://techniques/html/H44');
+    await testReadResource(serverProcess, 'wcag://techniques/H44');
     
     console.log('All tests completed successfully!');
   } catch (error) {
