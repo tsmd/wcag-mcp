@@ -29,10 +29,6 @@ import { JSDOM } from "jsdom";
  * WCAG MCP Server implementation
  */
 class WcagServer {
-  private server: Server;
-  private wcagBasePath: string;
-  private turndownService: any; // TurndownService instance
-
   constructor() {
     // Get the WCAG path from environment variable or use default relative path
     this.wcagBasePath = process.env.WCAG_PATH || '../wcag';
@@ -69,7 +65,7 @@ class WcagServer {
   /**
    * Convert HTML to Markdown
    */
-  private convertHtmlToMarkdown(html: string): string {
+  convertHtmlToMarkdown(html) {
     return this.turndownService.turndown(html);
   }
 
@@ -77,12 +73,12 @@ class WcagServer {
    * Extract principles, guidelines, and success criteria from guidelines/index.html
    * and format them with links to each success criterion
    */
-  private extractGuidelinesContent(html: string): string {
+  extractGuidelinesContent(html) {
     try {
       console.error('[HTML] Extracting principles, guidelines, and success criteria');
       
       // Load criteria data
-      let criteriaData: any = {};
+      let criteriaData = {};
       try {
         const criteriaPath = path.join(process.cwd(), 'wcag-criteria.json');
         console.error(`[Criteria] Loading criteria data from: ${criteriaPath}`);
@@ -167,7 +163,7 @@ class WcagServer {
   /**
    * Set up resource handlers for WCAG content
    */
-  private setupResourceHandlers() {
+  setupResourceHandlers() {
     // Handler for listing static resources
     this.server.setRequestHandler(ListResourcesRequestSchema, async () => ({
       resources: [
@@ -314,7 +310,7 @@ class WcagServer {
   /**
    * Read principles and guidelines from the WCAG repository
    */
-  private async readPrinciplesAndGuidelines(): Promise<string> {
+  async readPrinciplesAndGuidelines() {
     try {
       const filePath = path.join(this.wcagBasePath, 'guidelines/index.html');
       console.error(`[File] Reading: ${filePath}`);
@@ -328,7 +324,7 @@ class WcagServer {
   /**
    * Find a success criterion across all versions
    */
-  private async findCriterion(criterionId: string): Promise<string> {
+  async findCriterion(criterionId) {
     // Available versions
     const versions = ['20', '21', '22'];
     
@@ -357,7 +353,7 @@ class WcagServer {
   /**
    * Find an understanding document across all versions
    */
-  private async findUnderstanding(criterionId: string): Promise<string> {
+  async findUnderstanding(criterionId) {
     // Available versions
     const versions = ['20', '21', '22'];
     
@@ -386,9 +382,9 @@ class WcagServer {
   /**
    * Find a technique based on its ID prefix
    */
-  private async findTechnique(techniqueId: string): Promise<string> {
+  async findTechnique(techniqueId) {
     // Map of technique ID prefixes to technology directories
-    const TECHNIQUE_PREFIX_MAP: Record<string, string> = {
+    const TECHNIQUE_PREFIX_MAP = {
       'ARIA': 'aria',
       'C': 'css',
       'F': 'failures',
