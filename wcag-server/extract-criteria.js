@@ -14,7 +14,7 @@ async function extractCriteria() {
   console.error('[Extract] Starting extraction of WCAG success criteria');
   
   try {
-    // Get the base directory (assuming this script is in wcag-server/src)
+    // Get the base directory (assuming this script is in wcag-server)
     const baseDir = path.resolve(process.cwd(), '../wcag');
     console.error(`[Extract] Base directory: ${baseDir}`);
     
