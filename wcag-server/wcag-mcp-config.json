@@ -3,7 +3,7 @@
     "wcag-server": {
       "command": "node",
       "args": [
-        "${PROJECT_PATH}/wcag-server/build/index.js"
+        "${PROJECT_PATH}/wcag-server/wcag-server.js"
       ],
       "env": {
         "WCAG_PATH": "${PROJECT_PATH}/wcag"
