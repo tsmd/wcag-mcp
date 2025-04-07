@@ -75,38 +75,92 @@ class WcagServer {
 
   /**
    * Extract principles, guidelines, and success criteria from guidelines/index.html
+   * and format them with links to each success criterion
    */
   private extractGuidelinesContent(html: string): string {
     try {
       console.error('[HTML] Extracting principles, guidelines, and success criteria');
+      
+      // Load criteria data
+      let criteriaData: any = {};
+      try {
+        const criteriaPath = path.join(process.cwd(), 'wcag-criteria.json');
+        console.error(`[Criteria] Loading criteria data from: ${criteriaPath}`);
+        const criteriaJson = fs.readFileSync(criteriaPath, 'utf-8');
+        criteriaData = JSON.parse(criteriaJson);
+        console.error(`[Criteria] Loaded ${criteriaData.criteria?.length || 0} criteria`);
+      } catch (err) {
+        console.error('[Criteria] Error loading criteria data:', err);
+        // Continue without criteria data
+      }
+      
+      // Parse the HTML
       const dom = new JSDOM(html);
       const document = dom.window.document;
       
-      // Create a new document fragment to hold our extracted content
-      const fragment = document.createDocumentFragment();
+      // Build a formatted markdown output
+      let markdown = '';
       
-      // Extract all principle sections
+      // Process each principle
       const principles = document.querySelectorAll('section.principle');
+      let principleNumber = 0;
       
       principles.forEach(principle => {
-        // Clone the principle to avoid modifying the original
-        const principleClone = principle.cloneNode(true);
-        fragment.appendChild(principleClone);
+        principleNumber++;
+        
+        // Get principle title and description
+        const principleTitle = principle.querySelector('h2')?.textContent?.trim() || '';
+        const principleDescription = principle.querySelector('h2 + p')?.textContent?.trim() || '';
+        
+        // Add principle to markdown
+        markdown += `## ${principleTitle}\n\n`;
+        markdown += `${principleDescription}\n\n`;
+        
+        // Process each guideline within this principle
+        const guidelines = principle.querySelectorAll('section.guideline');
+        let guidelineNumber = 0;
+        
+        guidelines.forEach(guideline => {
+          guidelineNumber++;
+          
+          // Get guideline title and description
+          const guidelineTitle = guideline.querySelector('h3')?.textContent?.trim() || '';
+          const guidelineDescription = guideline.querySelector('h3 + p')?.textContent?.trim() || '';
+          
+          // Add guideline to markdown
+          markdown += `### ${guidelineTitle}\n\n`;
+          markdown += `${guidelineDescription}\n\n`;
+          
+          // Process each success criterion within this guideline
+          const criteria = guideline.querySelectorAll('section[data-include]');
+          let criterionNumber = 0;
+          
+          criteria.forEach(criterion => {
+            criterionNumber++;
+            
+            // Get criterion ID and title
+            const criterionId = criterion.id;
+            const criterionTitle = criterion.querySelector('h4')?.textContent?.trim() || '';
+            
+            // Format the criterion number (e.g., 1.1.1)
+            const criterionNumberFormatted = `${principleNumber}.${guidelineNumber}.${criterionNumber}`;
+
+            console.error('hoge', criterionNumberFormatted, criterionTitle);
+            
+            // Add criterion to markdown with link
+            markdown += `- [${criterionNumberFormatted} ${criterionTitle}](wcag://criteria/${criterionId})\n`;
+          });
+          
+          markdown += '\n';
+        });
       });
       
-      // Create a new HTML document with just the extracted content
-      const extractedHtml = `
-        <html>
-          <body>
-            ${Array.from(fragment.childNodes).map(node => (node as Element).outerHTML).join('')}
-          </body>
-        </html>
-      `;
-      
-      return extractedHtml;
+      return markdown;
     } catch (error) {
       console.error('[HTML] Error extracting content:', error);
-      return html; // Return original HTML if extraction fails
+      
+      // Return a simple error message as markdown
+      return `# Error Processing WCAG Guidelines\n\nAn error occurred while processing the WCAG guidelines: ${error}\n`;
     }
   }
 
@@ -160,18 +214,11 @@ class WcagServer {
         // Handle principles and guidelines
         if (uri === 'wcag://principles-guidelines') {
           const htmlContent = await this.readPrinciplesAndGuidelines();
-          console.error('[Conversion] Extracting and converting principles and guidelines to Markdown');
+          console.error('[Conversion] Generating principles and guidelines with links to criteria');
           
-          // Extract only the principles, guidelines, and success criteria
-          const extractedHtml = this.extractGuidelinesContent(htmlContent);
-          
-          // Convert to Markdown
-          const markdownContent = this.convertHtmlToMarkdown(extractedHtml);
-          
-          console.error(`[Conversion] Original HTML size: ${htmlContent.length} bytes`);
-          console.error(`[Conversion] Extracted HTML size: ${extractedHtml.length} bytes`);
-          console.error(`[Conversion] Markdown size: ${markdownContent.length} bytes`);
-          console.error(`[Conversion] Size reduction: ${((htmlContent.length - markdownContent.length) / htmlContent.length * 100).toFixed(2)}%`);
+          // Extract and format the content as markdown with links
+          const markdownContent = this.extractGuidelinesContent(htmlContent);
+          console.error(`[Conversion] Generated markdown content (${markdownContent.length} bytes)`);
           
           return {
             contents: [
