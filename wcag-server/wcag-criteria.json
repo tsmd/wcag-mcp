@@ -1,0 +1,622 @@
+{
+  "criteria": [
+    {
+      "id": "abbreviations",
+      "version": "20",
+      "level": "AAA",
+      "title": "Abbreviations",
+      "content": "<section id=\"abbreviations\" class=\"sc\">\n   \n   <h4>Abbreviations</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>A <a>mechanism</a> for identifying the expanded form or meaning of <a>abbreviations</a> is available.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "audio-control",
+      "version": "20",
+      "level": "A",
+      "title": "Audio Control",
+      "content": "<section id=\"audio-control\" class=\"sc\">\n   \n   <h4>Audio Control</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>If any audio on a web page plays automatically for more than 3 seconds, either a <a>mechanism</a> is available to <a>pause</a> or stop the audio, or a mechanism is available to control audio\n      volume independently from the overall system volume level.\n   </p>\n   \n   <p class=\"note\">Since any content that does not meet this success criterion can interfere with a user's\n      ability to use the whole page, all content on the web page (whether or not it is used\n      to meet other success criteria) must meet this success criterion. See <a href=\"#cc5\">Conformance Requirement 5: Non-Interference</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "audio-description-or-media-alternative-prerecorded",
+      "version": "20",
+      "level": "A",
+      "title": "Audio Description or Media Alternative (Prerecorded)",
+      "content": "<section id=\"audio-description-or-media-alternative-prerecorded\" class=\"sc\">\n   \n   <h4>Audio Description or Media Alternative (Prerecorded)</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>An <a>alternative for time-based media</a> or <a>audio description</a> of the <a>prerecorded</a>\n      <a>video</a> content is provided for <a>synchronized media</a>, except when the media is a <a>media alternative for text</a> and is clearly labeled as such.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "audio-description-prerecorded",
+      "version": "20",
+      "level": "AA",
+      "title": "Audio Description (Prerecorded)",
+      "content": "<section id=\"audio-description-prerecorded\" class=\"sc\">\n   \n   <h4>Audio Description (Prerecorded)</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p><a>Audio description</a> is provided for all <a>prerecorded</a>\n      <a>video</a> content in <a>synchronized media</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "audio-only-and-video-only-prerecorded",
+      "version": "20",
+      "level": "A",
+      "title": "Audio-only and Video-only (Prerecorded)",
+      "content": "<section id=\"audio-only-and-video-only-prerecorded\" class=\"sc\">\n   \n   <h4>Audio-only and Video-only (Prerecorded)</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>For <a>prerecorded</a>\n      <a>audio-only</a> and prerecorded <a>video-only</a> media, the following are true, except when the audio or video is a <a>media alternative for text</a> and is clearly labeled as such:\n   </p>\n   \n   <dl>\n      \n      <dt>Prerecorded Audio-only</dt>\n      \n      <dd>\n         \n         <p>An <a>alternative for time-based media</a> is provided that presents equivalent information for prerecorded audio-only content.\n         </p>\n         \n      </dd>\n      \n      <dt>Prerecorded Video-only</dt>\n      \n      <dd>\n         \n         <p>Either an alternative for time-based media or an audio track is provided that presents\n            equivalent information for prerecorded video-only content.\n         </p>\n         \n      </dd>\n      \n   </dl>\n   \n</section>"
+    },
+    {
+      "id": "audio-only-live",
+      "version": "20",
+      "level": "AAA",
+      "title": "Audio-only (Live)",
+      "content": "<section id=\"audio-only-live\" class=\"sc\">\n   \n   <h4>Audio-only (Live)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>An <a>alternative for time-based media</a> that presents equivalent information for <a>live</a>\n      <a>audio-only</a> content is provided.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "bypass-blocks",
+      "version": "20",
+      "level": "A",
+      "title": "Bypass Blocks",
+      "content": "<section id=\"bypass-blocks\" class=\"sc\">\n   \n   <h4>Bypass Blocks</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>A <a>mechanism</a> is available to bypass blocks of content that are repeated on multiple <a>web pages</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "captions-live",
+      "version": "20",
+      "level": "AA",
+      "title": "Captions (Live)",
+      "content": "<section id=\"captions-live\" class=\"sc\">\n   \n   <h4>Captions (Live)</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p><a>Captions</a> are provided for all <a>live</a>\n      <a>audio</a> content in <a>synchronized media</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "captions-prerecorded",
+      "version": "20",
+      "level": "A",
+      "title": "Captions (Prerecorded)",
+      "content": "<section id=\"captions-prerecorded\" class=\"sc\">\n   \n   <h4>Captions (Prerecorded)</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p><a>Captions</a> are provided for all <a>prerecorded</a>\n      <a>audio</a> content in <a>synchronized media</a>, except when the media is a <a>media alternative for text</a> and is clearly labeled as such.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "change-on-request",
+      "version": "20",
+      "level": "AAA",
+      "title": "Change on Request",
+      "content": "<section id=\"change-on-request\" class=\"sc\">\n   \n   <h4>Change on Request</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p><a>Changes of context</a> are initiated only by user request or a <a>mechanism</a> is available to turn off such changes.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "consistent-identification",
+      "version": "20",
+      "level": "AA",
+      "title": "Consistent Identification",
+      "content": "<section id=\"consistent-identification\" class=\"sc\">\n\n   <h4>Consistent Identification</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>Components that have the <a>same functionality</a> within a <a>set of web pages</a> are identified consistently.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "consistent-navigation",
+      "version": "20",
+      "level": "AA",
+      "title": "Consistent Navigation",
+      "content": "<section id=\"consistent-navigation\" class=\"sc\">\n   \n   <h4>Consistent Navigation</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>Navigational mechanisms that are repeated on multiple <a>web pages</a> within a <a>set of web pages</a> occur in the <a>same relative order</a> each time they are repeated, unless a change is initiated by the user.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "contrast-enhanced",
+      "version": "20",
+      "level": "AAA",
+      "title": "Contrast (Enhanced)",
+      "content": "<section id=\"contrast-enhanced\" class=\"sc\">\n   \n   <h4>Contrast (Enhanced)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>The visual presentation of <a>text</a> and <a>images of text</a> has a <a>contrast ratio</a> of at least 7:1, except for the following:\n   </p>\n   \n   <dl>\n      \n      <dt>Large Text</dt>\n      \n      <dd>\n         \n         <p><a>Large-scale</a> text and images of large-scale text have a contrast ratio of at least 4.5:1;\n         </p>\n         \n      </dd>\n      \n      <dt>Incidental</dt>\n      \n      <dd>\n         \n         <p>Text or images of text that are part of an inactive <a>user interface component</a>, that are <a>pure decoration</a>, that are not visible to anyone, or that are part of a picture that contains significant\n            other visual content, have no contrast requirement.\n         </p>\n         \n      </dd>\n      \n      <dt>Logotypes</dt>\n      \n      <dd>\n         \n         <p>Text that is part of a logo or brand name has no contrast requirement.</p>\n         \n      </dd>\n      \n   </dl>\n   \n</section>"
+    },
+    {
+      "id": "contrast-minimum",
+      "version": "20",
+      "level": "AA",
+      "title": "Contrast (Minimum)",
+      "content": "<section id=\"contrast-minimum\" class=\"sc\">\n   \n   <h4>Contrast (Minimum)</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>The visual presentation of <a>text</a> and <a>images of text</a> has a <a>contrast ratio</a> of at least 4.5:1, except for the following:\n   </p>\n   \n   <dl>\n      \n      <dt>Large Text</dt>\n      \n      <dd>\n         \n         <p><a>Large-scale</a> text and images of large-scale text have a contrast ratio of at least 3:1;\n         </p>\n         \n      </dd>\n      \n      <dt>Incidental</dt>\n      \n      <dd>\n         \n         <p>Text or images of text that are part of an inactive <a>user interface component</a>, that are <a>pure decoration</a>, that are not visible to anyone, or that are part of a picture that contains significant\n            other visual content, have no contrast requirement.\n         </p>\n         \n      </dd>\n      \n      <dt>Logotypes</dt>\n      \n      <dd>\n         \n         <p>Text that is part of a logo or brand name has no contrast requirement.</p>\n         \n      </dd>\n      \n   </dl>\n   \n</section>"
+    },
+    {
+      "id": "error-identification",
+      "version": "20",
+      "level": "A",
+      "title": "Error Identification",
+      "content": "<section id=\"error-identification\" class=\"sc\">\n   \n   <h4>Error Identification</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>If an <a>input error</a> is automatically detected, the item that is in error is identified and the error\n      is described to the user in text.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "error-prevention-all",
+      "version": "20",
+      "level": "AAA",
+      "title": "Error Prevention (All)",
+      "content": "<section id=\"error-prevention-all\" class=\"sc\">\n   \n   <h4>Error Prevention (All)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>For <a>web pages</a> that require the user to submit information, at least one of the following is true:\n   </p>\n   \n   <dl>\n     <dt>Reversible</dt><dd>Submissions are reversible.</dd>\n     <dt>Checked</dt><dd>Data entered by the user is checked for <a>input errors</a> and the user is provided an opportunity to correct them.</dd>\n     <dt>Confirmed</dt><dd>A <a>mechanism</a> is available for reviewing, confirming, and correcting information before finalizing the submission.</dd>\n  </dl>\n\n</section>"
+    },
+    {
+      "id": "error-prevention-legal-financial-data",
+      "version": "20",
+      "level": "AA",
+      "title": "Error Prevention (Legal, Financial, Data)",
+      "content": "<section id=\"error-prevention-legal-financial-data\" class=\"sc\">\n   \n   <h4>Error Prevention (Legal, Financial, Data)</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>For <a>web pages</a> that cause <a>legal commitments</a> or financial transactions for the user to occur, that modify or delete <a>user-controllable</a> data in data storage systems, or that submit user test responses, at least one of\n      the following is true:\n   </p>\n\n   <dl>\n     <dt>Reversible</dt><dd>Submissions are reversible.</dd>\n     <dt>Checked</dt><dd>Data entered by the user is checked for <a>input errors</a> and the user is provided an opportunity to correct them.</dd>\n     <dt>Confirmed</dt><dd>A <a>mechanism</a> is available for reviewing, confirming, and correcting information before finalizing the submission.</dd>\n  </dl>\n  \n</section>"
+    },
+    {
+      "id": "error-suggestion",
+      "version": "20",
+      "level": "AA",
+      "title": "Error Suggestion",
+      "content": "<section id=\"error-suggestion\" class=\"sc\">\n   \n   <h4>Error Suggestion</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>If an <a>input error</a> is automatically detected and suggestions for correction are known, then the suggestions\n      are provided to the user, unless it would jeopardize the security or purpose of the\n      content.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "extended-audio-description-prerecorded",
+      "version": "20",
+      "level": "AAA",
+      "title": "Extended Audio Description (Prerecorded)",
+      "content": "<section id=\"extended-audio-description-prerecorded\" class=\"sc\">\n   \n   <h4>Extended Audio Description (Prerecorded)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>Where pauses in foreground audio are insufficient to allow <a>audio descriptions</a> to convey the sense of the video, <a>extended audio description</a> is provided for all <a>prerecorded</a>\n      <a>video</a> content in <a>synchronized media</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "focus-order",
+      "version": "20",
+      "level": "A",
+      "title": "Focus Order",
+      "content": "<section id=\"focus-order\" class=\"sc\">\n   \n   <h4>Focus Order</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>If a <a>web page</a> can be <a>navigated sequentially</a> and the navigation sequences affect meaning or operation, focusable components receive\n      focus in an order that preserves meaning and operability.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "focus-visible",
+      "version": "20",
+      "level": "AA",
+      "title": "Focus Visible",
+      "content": "<section id=\"focus-visible\" class=\"sc\">\n   \n   <h4>Focus Visible</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>Any keyboard operable user interface has a mode of operation where the keyboard <a>focus indicator</a> is visible.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "headings-and-labels",
+      "version": "20",
+      "level": "AA",
+      "title": "Headings and Labels",
+      "content": "<section id=\"headings-and-labels\" class=\"sc\">\n   \n   <h4>Headings and Labels</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>Headings and <a>labels</a> describe topic or purpose.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "help",
+      "version": "20",
+      "level": "AAA",
+      "title": "Help",
+      "content": "<section id=\"help\" class=\"sc\">\n   \n   <h4>Help</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p><a>Context-sensitive help</a> is available.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "images-of-text",
+      "version": "20",
+      "level": "AA",
+      "title": "Images of Text",
+      "content": "<section id=\"images-of-text\" class=\"sc\">\n   \n   <h4>Images of Text</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>If the technologies being used can achieve the visual presentation, <a>text</a> is used to convey information rather than <a>images of text</a> except for the following:\n   </p>\n   \n   <dl>\n      \n      <dt>Customizable</dt>\n      \n      <dd>\n         \n         <p>The image of text can be <a>visually customized</a> to the user's requirements;\n         </p>\n         \n      </dd>\n      \n      <dt>Essential</dt>\n      \n      <dd>\n         \n         <p>A particular presentation of text is <a>essential</a> to the information being conveyed.\n         </p>\n         \n      </dd>\n      \n   </dl>\n   \n   <p class=\"note\">Logotypes (text that is part of a logo or brand name) are considered essential.</p>\n   \n</section>"
+    },
+    {
+      "id": "images-of-text-no-exception",
+      "version": "20",
+      "level": "AAA",
+      "title": "Images of Text (No Exception)",
+      "content": "<section id=\"images-of-text-no-exception\" class=\"sc\">\n   \n   <h4>Images of Text (No Exception)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p><a>Images of text</a> are only used for <a>pure decoration</a> or where a particular presentation of <a>text</a> is <a>essential</a> to the information being conveyed.\n   </p>\n   \n   <p class=\"note\">Logotypes (text that is part of a logo or brand name) are considered essential.</p>\n   \n</section>"
+    },
+    {
+      "id": "info-and-relationships",
+      "version": "20",
+      "level": "A",
+      "title": "Info and Relationships",
+      "content": "<section id=\"info-and-relationships\" class=\"sc\">\n   \n   <h4>Info and Relationships</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>Information, <a>structure</a>, and <a>relationships</a> conveyed through <a>presentation</a> can be <a>programmatically determined</a> or are available in text.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "interruptions",
+      "version": "20",
+      "level": "AAA",
+      "title": "Interruptions",
+      "content": "<section id=\"interruptions\" class=\"sc\">\n   \n   <h4>Interruptions</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>Interruptions can be postponed or suppressed by the user, except interruptions involving\n      an <a>emergency</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "keyboard",
+      "version": "20",
+      "level": "A",
+      "title": "Keyboard",
+      "content": "<section id=\"keyboard\" class=\"sc\">\n   \n   <h4>Keyboard</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>All <a>functionality</a> of the content is operable through a <a>keyboard interface</a> without requiring specific timings for individual keystrokes, except where the underlying\n      function requires input that depends on the path of the user's movement and not just\n      the endpoints.\n   </p>\n   \n   <p class=\"note\">This exception relates to the underlying function, not the input technique. For example,\n      if using handwriting to enter text, the input technique (handwriting) requires path-dependent\n      input but the underlying function (text input) does not.\n   </p>\n   \n   <p class=\"note\">This does not forbid and should not discourage providing mouse input or other input\n      methods in addition to keyboard operation.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "keyboard-no-exception",
+      "version": "20",
+      "level": "AAA",
+      "title": "Keyboard (No Exception)",
+      "content": "<section id=\"keyboard-no-exception\" class=\"sc\">\n   \n   <h4>Keyboard (No Exception)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>All <a>functionality</a> of the content is operable through a <a>keyboard interface</a> without requiring specific timings for individual keystrokes.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "labels-or-instructions",
+      "version": "20",
+      "level": "A",
+      "title": "Labels or Instructions",
+      "content": "<section id=\"labels-or-instructions\" class=\"sc\">\n   \n   <h4>Labels or Instructions</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p><a>Labels</a> or instructions are provided when content requires user input.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "language-of-page",
+      "version": "20",
+      "level": "A",
+      "title": "Language of Page",
+      "content": "<section id=\"language-of-page\" class=\"sc\">\n   \n   <h4>Language of Page</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>The default <a>human language</a> of each <a>web page</a> can be <a>programmatically determined</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "language-of-parts",
+      "version": "20",
+      "level": "AA",
+      "title": "Language of Parts",
+      "content": "<section id=\"language-of-parts\" class=\"sc\">\n   \n   <h4>Language of Parts</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>The <a>human language</a> of each passage or phrase in the content can be <a>programmatically determined</a> except for proper names, technical terms, words of indeterminate language, and words\n      or phrases that have become part of the vernacular of the immediately surrounding\n     <a>text</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "link-purpose-in-context",
+      "version": "20",
+      "level": "A",
+      "title": "Link Purpose (In Context)",
+      "content": "<section id=\"link-purpose-in-context\" class=\"sc\">\n   \n   <h4>Link Purpose (In Context)</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>The <a>purpose of each link</a> can be determined from the link text alone or from the link text together with its\n      <a>programmatically determined link context</a>, except where the purpose of the link would be <a>ambiguous to users in general</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "link-purpose-link-only",
+      "version": "20",
+      "level": "AAA",
+      "title": "Link Purpose (Link Only)",
+      "content": "<section id=\"link-purpose-link-only\" class=\"sc\">\n   \n   <h4>Link Purpose (Link Only)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n  <p>A <a>mechanism</a> is available to allow the <a>purpose of each link</a> to be identified from link text alone,\n      except where the purpose of the link would be <a>ambiguous to users in general</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "location",
+      "version": "20",
+      "level": "AAA",
+      "title": "Location",
+      "content": "<section id=\"location\" class=\"sc\">\n   \n   <h4>Location</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>Information about the user's location within a <a>set of web pages</a> is available.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "low-or-no-background-audio",
+      "version": "20",
+      "level": "AAA",
+      "title": "Low or No Background Audio",
+      "content": "<section id=\"low-or-no-background-audio\" class=\"sc\">\n   \n   <h4>Low or No Background Audio</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>For <a>prerecorded</a>\n      <a>audio-only</a> content that (1) contains primarily speech in the foreground, (2) is not an audio\n      <a>CAPTCHA</a> or audio logo, and (3) is not vocalization intended to be primarily musical expression\n      such as singing or rapping, at least one of the following is true:\n   </p>\n   \n   <dl>\n      \n      <dt>No Background</dt>\n      \n      <dd>\n         \n         <p>The audio does not contain background sounds.</p>\n         \n      </dd>\n      \n      <dt>Turn Off</dt>\n      \n      <dd>\n         \n         <p>The background sounds can be turned off.</p>\n         \n      </dd>\n      \n      <dt>20 dB</dt>\n      \n      <dd>\n         \n         <p>The background sounds are at least 20 decibels lower than the foreground speech content,\n            with the exception of occasional sounds that last for only one or two seconds.\n         </p>\n         \n         <p class=\"note\">Per the definition of \"decibel,\" background sound that meets this requirement will\n            be approximately four times quieter than the foreground speech content.\n         </p>\n         \n      </dd>\n      \n   </dl>\n   \n</section>"
+    },
+    {
+      "id": "meaningful-sequence",
+      "version": "20",
+      "level": "A",
+      "title": "Meaningful Sequence",
+      "content": "<section id=\"meaningful-sequence\" class=\"sc\">\n   \n   <h4>Meaningful Sequence</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>When the sequence in which content is presented affects its meaning, a <a>correct reading sequence</a> can be <a>programmatically determined</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "media-alternative-prerecorded",
+      "version": "20",
+      "level": "AAA",
+      "title": "Media Alternative (Prerecorded)",
+      "content": "<section id=\"media-alternative-prerecorded\" class=\"sc\">\n   \n   <h4>Media Alternative (Prerecorded)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>An <a>alternative for time-based media</a> is provided for all <a>prerecorded</a>\n      <a>synchronized media</a> and for all prerecorded <a>video-only</a> media.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "multiple-ways",
+      "version": "20",
+      "level": "AA",
+      "title": "Multiple Ways",
+      "content": "<section id=\"multiple-ways\" class=\"sc\">\n   \n   <h4>Multiple Ways</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>More than one way is available to locate a <a>web page</a> within a <a>set of web pages</a> except where the web page is the result of, or a step in, a <a>process</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "name-role-value",
+      "version": "20",
+      "level": "A",
+      "title": "Name, Role, Value",
+      "content": "<section id=\"name-role-value\" class=\"sc\">\n   \n   <h4>Name, Role, Value</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>For all <a>user interface components</a> (including but not limited to: form elements, links and components generated by scripts),\n     the <a>name</a> and <a>role</a> can be <a>programmatically determined</a>; <a>states</a>, properties, and values that can be set by the user can be <a>programmatically set</a>; and notification of changes to these items is available to <a>user agents</a>, including <a>assistive technologies</a>.\n   </p>\n   \n   <p class=\"note\">This success criterion is primarily for web authors who develop or script their own\n      user interface components. For example, standard HTML controls already meet this success\n      criterion when used according to specification.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "no-keyboard-trap",
+      "version": "20",
+      "level": "A",
+      "title": "No Keyboard Trap",
+      "content": "<section id=\"no-keyboard-trap\" class=\"sc\">\n   \n   <h4>No Keyboard Trap</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>If keyboard focus can be moved to a component of the page using a <a>keyboard interface</a>, then focus can be moved away from that component using only a keyboard interface,\n      and, if it requires more than unmodified arrow or tab keys or other standard exit\n      methods, the user is advised of the method for moving focus away.\n   </p>\n   \n   <p class=\"note\">Since any content that does not meet this success criterion can interfere with a user's\n      ability to use the whole page, all content on the web page (whether it is used to\n      meet other success criteria or not) must meet this success criterion. See <a href=\"#cc5\">Conformance Requirement 5: Non-Interference</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "no-timing",
+      "version": "20",
+      "level": "AAA",
+      "title": "No Timing",
+      "content": "<section id=\"no-timing\" class=\"sc\">\n   \n   <h4>No Timing</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>Timing is not an <a>essential</a> part of the event or activity presented by the content, except for non-interactive\n      <a>synchronized media</a> and <a>real-time events</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "non-text-content",
+      "version": "20",
+      "level": "A",
+      "title": "Non-text Content",
+      "content": "<section id=\"non-text-content\" class=\"sc\">\n   \n   <h4>Non-text Content</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>All <a>non-text content</a> that is presented to the user has a <a>text alternative</a> that serves the equivalent purpose, except for the situations listed below.\n   </p>\n   \n   <dl>\n      \n      <dt>Controls, Input</dt>\n      \n      <dd>\n         \n         <p>If non-text content is a control or accepts user input, then it has a <a>name</a> that describes its purpose. (Refer to <a href=\"#name-role-value\">Success Criterion 4.1.2</a> for additional requirements for controls and content that accepts user input.)\n         </p>\n         \n      </dd>\n      \n      <dt>Time-Based Media</dt>\n      \n      <dd>\n         \n         <p>If non-text content is time-based media, then text alternatives at least provide descriptive\n            identification of the non-text content. (Refer to <a href=\"#time-based-media\">Guideline 1.2</a> for additional requirements for media.)\n         </p>\n         \n      </dd>\n      \n      <dt>Test</dt>\n      \n      <dd>\n         \n         <p>If non-text content is a test or exercise that would be invalid if presented in <a>text</a>, then text alternatives at least provide descriptive identification of the non-text\n            content.\n         </p>\n         \n      </dd>\n      \n      <dt>Sensory</dt>\n      \n      <dd>\n         \n         <p>If non-text content is primarily intended to create a <a>specific sensory experience</a>, then text alternatives at least provide descriptive identification of the non-text\n            content.\n         </p>\n         \n      </dd>\n      \n      <dt><a>CAPTCHA</a></dt>\n      \n      <dd>\n         \n         <p>If the purpose of non-text content is to confirm that content is being accessed by\n            a person rather than a computer, then text alternatives that identify and describe\n            the purpose of the non-text content are provided, and alternative forms of CAPTCHA\n            using output modes for different types of sensory perception are provided to accommodate\n            different disabilities.\n         </p>\n         \n      </dd>\n      \n      <dt>Decoration, Formatting, Invisible</dt>\n      \n      <dd>\n         \n         <p>If non-text content is <a>pure decoration</a>, is used only for visual formatting, or is not presented to users, then it is implemented\n            in a way that it can be ignored by <a>assistive technology</a>.\n         </p>\n         \n      </dd>\n      \n   </dl>\n   \n</section>"
+    },
+    {
+      "id": "on-focus",
+      "version": "20",
+      "level": "A",
+      "title": "On Focus",
+      "content": "<section id=\"on-focus\" class=\"sc\">\n   \n   <h4>On Focus</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>When any <a>user interface component</a> receives focus, it does not initiate a <a>change of context</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "on-input",
+      "version": "20",
+      "level": "A",
+      "title": "On Input",
+      "content": "<section id=\"on-input\" class=\"sc\">\n   \n   <h4>On Input</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>Changing the setting of any <a>user interface component</a> does not automatically cause a <a>change of context</a> unless the user has been advised of the behavior before using the component.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "page-titled",
+      "version": "20",
+      "level": "A",
+      "title": "Page Titled",
+      "content": "<section id=\"page-titled\" class=\"sc\">\n   \n   <h4>Page Titled</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p><a>Web pages</a> have titles that describe topic or purpose.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "parsing",
+      "version": "20",
+      "level": "",
+      "title": "Parsing (Obsolete and removed)",
+      "content": "<section id=\"parsing\" class=\"sc\">\n   \n   <h4>Parsing (Obsolete and removed)</h4>\n\n   <p class=\"note\">This criterion was originally adopted to address problems that assistive technology had directly parsing HTML. Assistive technology no longer has any need to directly parse HTML. Consequently, these problems either no longer exist or are addressed by other criteria. This criterion no longer has utility and is removed.</p>\n   \n</section>"
+    },
+    {
+      "id": "pause-stop-hide",
+      "version": "20",
+      "level": "A",
+      "title": "Pause, Stop, Hide",
+      "content": "<section id=\"pause-stop-hide\" class=\"sc\">\n   \n   <h4>Pause, Stop, Hide</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>For moving, <a>blinking</a>, scrolling, or auto-updating information, all of the following are true:\n   </p>\n   \n   <dl>\n      \n      <dt>Moving, blinking, scrolling</dt>\n      \n      <dd>\n         \n         <p>For any moving, blinking or scrolling information that (1) starts automatically, (2)\n            lasts more than five seconds, and (3) is presented in parallel with other content,\n           there is a <a>mechanism</a> for the user to <a>pause</a>, stop, or hide it unless the movement, blinking, or scrolling is part of an activity\n            where it is <a>essential</a>; and\n         </p>\n         \n      </dd>\n      \n      <dt>Auto-updating</dt>\n      \n      <dd>\n         \n         <p>For any auto-updating information that (1) starts automatically and (2) is presented\n            in parallel with other content, there is a mechanism for the user to pause, stop,\n            or hide it or to control the frequency of the update unless the auto-updating is part\n            of an activity where it is essential.\n         </p>\n         \n      </dd>\n      \n   </dl>\n   \n   <p class=\"note\">For requirements related to flickering or flashing content, refer to <a href=\"#seizures-and-physical-reactions\">Guideline 2.3</a>.\n   </p>\n   \n   <p class=\"note\">Since any content that does not meet this success criterion can interfere with a user's\n      ability to use the whole page, all content on the web page (whether it is used to\n      meet other success criteria or not) must meet this success criterion. See <a href=\"#cc5\">Conformance Requirement 5: Non-Interference</a>.\n   </p>\n   \n   <p class=\"note\">Content that is updated periodically by software or that is streamed to the user agent\n      is not required to preserve or present information that is generated or received between\n      the initiation of the pause and resuming presentation, as this may not be technically\n      possible, and in many situations could be misleading to do so.\n   </p>\n   \n   <p class=\"note\">An animation that occurs as part of a preload phase or similar situation can be considered\n      essential if interaction cannot occur during that phase for all users and if not indicating\n      progress could confuse users or cause them to think that content was frozen or broken.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "pronunciation",
+      "version": "20",
+      "level": "AAA",
+      "title": "Pronunciation",
+      "content": "<section id=\"pronunciation\" class=\"sc\">\n   \n   <h4>Pronunciation</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>A <a>mechanism</a> is available for identifying specific pronunciation of words where meaning of the\n      words, in context, is ambiguous without knowing the pronunciation.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "re-authenticating",
+      "version": "20",
+      "level": "AAA",
+      "title": "Re-authenticating",
+      "content": "<section id=\"re-authenticating\" class=\"sc\">\n   \n   <h4>Re-authenticating</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>When an authenticated session expires, the user can continue the activity without\n      loss of data after re-authenticating.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "reading-level",
+      "version": "20",
+      "level": "AAA",
+      "title": "Reading Level",
+      "content": "<section id=\"reading-level\" class=\"sc\">\n   \n   <h4>Reading Level</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n  <p>When text requires reading ability more advanced than the <a>lower secondary education level</a> after removal of proper names and titles, <a>supplemental content</a>, or a version that does not require reading ability more advanced than the lower\n      secondary education level, is available.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "resize-text",
+      "version": "20",
+      "level": "AA",
+      "title": "Resize Text",
+      "content": "<section id=\"resize-text\" class=\"sc\">\n   \n   <h4>Resize Text</h4>\n   \n   <p class=\"conformance-level\">AA</p>\n   \n   <p>Except for <a>captions</a> and <a>images of text</a>, <a>text</a> can be resized without <a>assistive technology</a> up to 200 percent without loss of content or functionality.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "section-headings",
+      "version": "20",
+      "level": "AAA",
+      "title": "Section Headings",
+      "content": "<section id=\"section-headings\" class=\"sc\">\n   \n   <h4>Section Headings</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p><a>Section</a> headings are used to organize the content.\n   </p>\n   \n   <p class=\"note\">\"Heading\" is used in its general sense and includes titles and other ways to add a\n      heading to different types of content.\n   </p>\n   \n   <p class=\"note\">This success criterion covers sections within writing, not <a>user interface components</a>. User interface components are covered under <a href=\"#name-role-value\">Success Criterion 4.1.2</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "sensory-characteristics",
+      "version": "20",
+      "level": "A",
+      "title": "Sensory Characteristics",
+      "content": "<section id=\"sensory-characteristics\" class=\"sc\">\n   \n   <h4>Sensory Characteristics</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>Instructions provided for understanding and operating content do not rely solely on\n      sensory characteristics of components such as shape, color, size, visual location, orientation,\n      or sound.\n   </p>\n  \n  <p class=\"note\">For requirements related to color, refer to <a href=\"#distinguishable\">Guideline 1.4</a>.</p>\n   \n</section>"
+    },
+    {
+      "id": "sign-language-prerecorded",
+      "version": "20",
+      "level": "AAA",
+      "title": "Sign Language (Prerecorded)",
+      "content": "<section id=\"sign-language-prerecorded\" class=\"sc\">\n   \n   <h4>Sign Language (Prerecorded)</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p><a>Sign language interpretation</a> is provided for all <a>prerecorded</a>\n      <a>audio</a> content in <a>synchronized media</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "three-flashes",
+      "version": "20",
+      "level": "AAA",
+      "title": "Three Flashes",
+      "content": "<section id=\"three-flashes\" class=\"sc\">\n   \n   <h4>Three Flashes</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p><a>Web pages</a> do not contain anything that <a>flashes</a> more than three times in any one second period.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "three-flashes-or-below-threshold",
+      "version": "20",
+      "level": "A",
+      "title": "Three Flashes or Below Threshold",
+      "content": "<section id=\"three-flashes-or-below-threshold\" class=\"sc\">\n   \n   <h4>Three Flashes or Below Threshold</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p><a>Web pages</a> do not contain anything that flashes more than three times in any one second period,\n      or the <a>flash</a> is below the <a>general flash and red flash thresholds</a>.\n   </p>\n   \n   <p class=\"note\">Since any content that does not meet this success criterion can interfere with a user's\n      ability to use the whole page, all content on the web page (whether it is used to\n      meet other success criteria or not) must meet this success criterion. See <a href=\"#cc5\">Conformance Requirement 5: Non-Interference</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "timing-adjustable",
+      "version": "20",
+      "level": "A",
+      "title": "Timing Adjustable",
+      "content": "<section id=\"timing-adjustable\" class=\"sc\">\n   \n   <h4>Timing Adjustable</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>For each time limit that is set by the content, at least one of the following is true:</p>\n   \n   <dl>\n      \n      <dt>Turn off</dt>\n      \n      <dd>\n         \n         <p>The user is allowed to turn off the time limit before encountering it; or</p>\n         \n      </dd>\n      \n      <dt>Adjust</dt>\n      \n      <dd>\n         \n         <p>The user is allowed to adjust the time limit before encountering it over a wide range\n            that is at least ten times the length of the default setting; or\n         </p>\n         \n      </dd>\n      \n      <dt>Extend</dt>\n      \n      <dd>\n         \n         <p>The user is warned before time expires and given at least 20 seconds to extend the\n            time limit with a simple action (for example, \"press the space bar\"), and the user\n            is allowed to extend the time limit at least ten times; or\n         </p>\n         \n      </dd>\n      \n      <dt>Real-time Exception</dt>\n      \n      <dd>\n         \n        <p>The time limit is a required part of a <a>real-time event</a> (for example, an auction),\n            and no alternative to the time limit is possible; or\n         </p>\n         \n      </dd>\n      \n      <dt>Essential Exception</dt>\n      \n      <dd>\n         \n         <p>The time limit is <a>essential</a> and extending it would invalidate the activity; or\n         </p>\n         \n      </dd>\n      \n      <dt>20 Hour Exception</dt>\n      \n      <dd>\n         \n         <p>The time limit is longer than 20 hours.</p>\n         \n      </dd>\n      \n   </dl>\n   \n   <p class=\"note\">This success criterion helps ensure that users can complete tasks without unexpected\n      changes in content or context that are a result of a time limit. This success criterion\n      should be considered in conjunction with <a href=\"#on-focus\">Success Criterion 3.2.1</a>, which puts limits on changes of content or context as a result of user action.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "unusual-words",
+      "version": "20",
+      "level": "AAA",
+      "title": "Unusual Words",
+      "content": "<section id=\"unusual-words\" class=\"sc\">\n   \n   <h4>Unusual Words</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>A <a>mechanism</a> is available for identifying specific definitions of words or phrases <a>used in an unusual or restricted way</a>, including <a>idioms</a> and <a>jargon</a>.\n   </p>\n   \n</section>"
+    },
+    {
+      "id": "use-of-color",
+      "version": "20",
+      "level": "A",
+      "title": "Use of Color",
+      "content": "<section id=\"use-of-color\" class=\"sc\">\n   \n   <h4>Use of Color</h4>\n   \n   <p class=\"conformance-level\">A</p>\n   \n   <p>Color is not used as the only visual means of conveying information, indicating an\n      action, prompting a response, or distinguishing a visual element.\n   </p>\n   \n   <p class=\"note\">This success criterion addresses color perception specifically. Other forms of perception are covered in <a href=\"#adaptable\">Guideline 1.3</a> including programmatic access to color and other visual presentation coding.</p>\n  \n</section>"
+    },
+    {
+      "id": "visual-presentation",
+      "version": "20",
+      "level": "AAA",
+      "title": "Visual Presentation",
+      "content": "<section id=\"visual-presentation\" class=\"sc\">\n\n   <h4>Visual Presentation</h4>\n   \n   <p class=\"conformance-level\">AAA</p>\n   \n   <p>For the visual presentation of <a>blocks of text</a>, a <a>mechanism</a> is available to achieve the following:\n   </p>\n   <ul>\n     <li>Foreground and background colors can be selected by the user.</li>   \n     <li>Width is no more than 80 characters or glyphs (40 if CJK).</li>   \n     <li>Text is not justified (aligned to both the left and the right margins).</li>   \n     <li>Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing.</li>   \n     <li>Text can be resized without <a>assistive technology</a> up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text <a>on a full-screen window</a>.</li>   \n  </ul>\n\n<p class=\"note\">Content is not required to use these values. The requirement is that a mechanism is available for users to change these presentation aspects. The mechanism can be provided by the browser or other user agent. Content is not required to provide the mechanism.</p>\n\n<p class=\"note\">Writing systems for some languages use different presentation aspects to improve readability and legibility. If a presentation aspect in this success criterion is not used in a writing system, content in that writing system does not need to use that presentation setting and can conform without it. Authors are encouraged to follow guidance for improving readability and legibility of text in their writing system.</p>\n  \n</section>"
+    },
+    {
+      "id": "animation-from-interactions",
+      "version": "21",
+      "level": "AAA",
+      "title": "Animation from Interactions",
+      "content": "<section id=\"animation-from-interactions\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Animation from Interactions</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AAA</p>\n   \t\t\t\t\t\n  <p><a>Motion animation</a> triggered by interaction can be disabled, unless the animation is <a>essential</a> to the functionality or the information being conveyed.</p>\n   \t\t\t\t\n</section>"
+    },
+    {
+      "id": "change-of-content",
+      "version": "21",
+      "level": "AA",
+      "title": "Change of Content",
+      "content": "<section id=\"change-of-content\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Change of Content</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AA</p>\n   \t\t\t\t\t\n   <p>Status messages are programmatically determined through role or attributes such that they can be presented to the user by assistive technologies without receiving focus. </p>\n\n</section>"
+    },
+    {
+      "id": "character-key-shortcuts",
+      "version": "21",
+      "level": "A",
+      "title": "Character Key Shortcuts",
+      "content": "<section id=\"character-key-shortcuts\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Character Key Shortcuts</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">A</p>\n   \t\t\t\t\t\n  <p>If a <a>keyboard shortcut</a> is implemented in content using only letter (including upper- and lower-case letters), punctuation, number, or symbol characters, then at least one of the following is true:</p>\n\n  <dl>\n   \n   <dt>Turn off</dt>\n    <dd>A <a>mechanism</a> is available to turn the shortcut off;</dd>\n      \t\t\t\t\t\t\n   <dt>Remap</dt>\n     <dd>A mechanism is available to remap the shortcut to include one or more non-printable keyboard keys (e.g., Ctrl, Alt);</dd>\n\n    <dt>Active only on focus</dt>\n    <dd>The keyboard shortcut for a <a>user interface component</a> is only active when that component has focus.</dd>\n    \n  </dl>  \n</section>"
+    },
+    {
+      "id": "concurrent-input-mechanisms",
+      "version": "21",
+      "level": "AAA",
+      "title": "Concurrent Input Mechanisms",
+      "content": "<section id=\"concurrent-input-mechanisms\" class=\"sc\">\n   <h4>Concurrent Input Mechanisms</h4>\n   <p class=\"conformance-level\">AAA</p>\n  <p>Web content does not restrict use of input modalities available on a platform except where the restriction is <a>essential</a>, required to ensure the security of the content, or required to respect user settings.</p>   \t\t\t\t\t\n</section>"
+    },
+    {
+      "id": "content-on-hover-or-focus",
+      "version": "21",
+      "level": "AA",
+      "title": "Content on Hover or Focus",
+      "content": "<section id=\"content-on-hover-or-focus\" class=\"sc\">\n\n   <h4>Content on Hover or Focus</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AA</p>\n       \n    \t<p>Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:</p>\n\n  <dl>\n\n    <dt>Dismissible</dt>\n    <dd>A <a>mechanism</a> is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an <a>input error</a> or does not obscure or replace other content;</dd>\n\n    <dt>Hoverable</dt>\n   <dd>If pointer hover can trigger the additional content, then the pointer can be moved  over the additional content without the additional content disappearing;</dd>\n\n    <dt>Persistent</dt>\n    <dd>The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.</dd>\n\n  </dl>\n    \t\n    \t<p>Exception: The visual presentation of the additional content is controlled by the <a>user agent</a> and is not modified by the author.</p>\n\n    \t<p class=\"note\">Examples of additional content controlled by the user agent include browser tooltips created through use of the HTML <a href=\"https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute\"><code>title</code> attribute</a> [[HTML]].</p>\n     <p class=\"note\">Custom tooltips, sub-menus, and other nonmodal popups that display on hover and focus are examples of additional content covered by this criterion.</p>\n     <p class=\"note\">This criterion applies to content that appears in addition to the triggering component itself. Since hidden components that are made visible on keyboard focus (such as links used to skip to another part of a page) do not present additional content they are not covered by this criterion.</p>\n  </section>"
+    },
+    {
+      "id": "identify-input-purpose",
+      "version": "21",
+      "level": "AA",
+      "title": "Identify Input Purpose",
+      "content": "<section id=\"identify-input-purpose\" class=\"sc\">\n\t\n\t<h4>Identify Input Purpose</h4>\n\t\n\t<p class=\"conformance-level\">AA</p>\n\t\n\t<p>The purpose of each input field collecting information about the user can be <a>programmatically determined</a> when:</p>\n  \n  <ul>\n    <li>The input field serves a purpose identified in the <a href=\"#input-purposes\">Input Purposes for user interface components section</a>; and</li>\n    <li>The content is implemented using technologies with support for identifying the expected meaning for form input data.</li>\n  </ul>\n  \n</section>"
+    },
+    {
+      "id": "identify-purpose",
+      "version": "21",
+      "level": "AAA",
+      "title": "Identify Purpose",
+      "content": "<section id=\"identify-purpose\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Identify Purpose</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AAA</p>\n   \t\t\t\t\t\n  <p>In content implemented using markup languages, the purpose of <a>user interface components</a>, icons, and <a>regions</a> can be <a>programmatically determined</a>.</p>\n</section>"
+    },
+    {
+      "id": "label-in-name",
+      "version": "21",
+      "level": "A",
+      "title": "Label in Name",
+      "content": "<section id=\"label-in-name\" class=\"sc\">\n   <h4>Label in Name</h4>\n   <p class=\"conformance-level\">A</p>\n\t\n  <p>For <a>user interface components</a> with <a>labels</a> that include <a>text</a> or <a>images of text</a>, the <a>name</a> contains the text that is presented visually.</p>\n\n  <p class=\"note\">A best practice is to have  the text of the label at the start of the name.</p>\n\t\n</section>"
+    },
+    {
+      "id": "motion-actuation",
+      "version": "21",
+      "level": "A",
+      "title": "Motion Actuation",
+      "content": "<section id=\"motion-actuation\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Motion Actuation</h4>\n  \n   <p class=\"conformance-level\">A</p>\n   \t\t\t\t\t\n   <p><a>Functionality</a> that can be operated by device motion or user motion can also be operated by <a>user interface components</a> and responding to the motion can be disabled to prevent accidental actuation, except when:</p>\n   \n   <dl>\n   \n   <dt>Supported Interface</dt>\n     <dd>The motion is used to operate functionality through an <a>accessibility supported</a> interface;</dd>\n   \n   <dt>Essential</dt>\n   <dd>The motion is <a>essential</a> for the function and doing so would invalidate the activity.</dd>\n   \n   </dl>\n   \t\t\t\t\n</section>"
+    },
+    {
+      "id": "non-text-contrast",
+      "version": "21",
+      "level": "AA",
+      "title": "Non-text Contrast",
+      "content": "<section id=\"non-text-contrast\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Non-text Contrast</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AA</p>\n   \t\t\t\t\t\n   <p>The visual <a>presentation</a> of the following have a <a>contrast ratio</a> of at least 3:1 against adjacent color(s):</p>\n   \t\t\t\t\t\n   <dl>\n      \t\t\t\t\t\t\n      <dt>User Interface Components</dt>\n      \t\t\t\t\t\t\n     <dd>Visual information required to identify <a>user interface components</a> and <a>states</a>, except for inactive components or where the appearance of the component is determined by the <a>user agent</a> and not modified by the author;</dd>\n      \t\t\t\t\t\t\n      <dt>Graphical Objects</dt>\n      \t\t\t\t\t\t\n      <dd>Parts of graphics required to understand the content, except when a particular presentation of graphics is <a>essential</a> to the information being conveyed.</dd>\n      \t\t\t\t\t\t\n   </dl>\n  \n</section>"
+    },
+    {
+      "id": "orientation",
+      "version": "21",
+      "level": "AA",
+      "title": "Orientation",
+      "content": "<section id=\"orientation\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Orientation</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AA</p>\n   \t\t\t\t\t\n  <p>Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is <a>essential</a>.</p>\n   \t\t\t\t\n   <p class=\"note\">Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where content is not necessarily restricted to landscape or portrait display orientation.</p>\n   \t\t\t\t\t\n</section>"
+    },
+    {
+      "id": "pointer-cancellation",
+      "version": "21",
+      "level": "A",
+      "title": "Pointer Cancellation",
+      "content": "<section id=\"pointer-cancellation\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Pointer Cancellation</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">A</p>\n   \t\t\t\t\t\n   <p>For <a>functionality</a> that can be operated using a <a>single pointer</a>, at least one of the following is true:</p>\n   \t\t\t\t\t\n   <dl>\n   \n   <dt>No Down-Event</dt>\n     <dd>The <a>down-event</a> of the pointer is not used to execute any part of the function;</dd>\n      \t\t\t\t\t\t\n   <dt>Abort or Undo</dt>\n     <dd>Completion of the function is on the <a>up-event</a>, and a <a>mechanism</a> is available to abort the function before completion or to undo the function after completion;</dd>\n      \t\t\t\t\t\t\n   <dt>Up Reversal</dt>\n     <dd>The up-event reverses any outcome of the preceding down-event;</dd>\n      \t\t\t\t\t\t\n   <dt>Essential</dt>\n     <dd>Completing the function on the down-event is <a>essential</a>.</dd>\n      \t\t\t\t\t\t\n   </dl>\n   <p class=\"note\">Functions that emulate a keyboard or numeric keypad key press are considered essential.</p>\n   \t\t\t\t\t\n  <p class=\"note\">This requirement applies to web content that interprets pointer actions (i.e., this does not apply to actions that are required to operate the user agent or assistive technology).</p>\n\t\n</section>"
+    },
+    {
+      "id": "pointer-gestures",
+      "version": "21",
+      "level": "A",
+      "title": "Pointer Gestures",
+      "content": "<section id=\"pointer-gestures\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Pointer Gestures</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">A</p>\n   \t\t\t\t\t\n   <p>All <a>functionality</a> that uses multipoint or path-based gestures for operation can be operated with a <a>single pointer</a> without a path-based gesture, unless a multipoint or path-based gesture is <a>essential</a>.</p>\n   \t\t\t\t\t\n   <p class=\"note\">This requirement applies to web content that interprets pointer actions (i.e., this does not apply to actions that are required to operate the user agent or assistive technology).</p>\n\t\n</section>"
+    },
+    {
+      "id": "reflow",
+      "version": "21",
+      "level": "AA",
+      "title": "Reflow",
+      "content": "<section id=\"reflow\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Reflow</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AA</p>\n   \t\t\t\t\t\n   <p>Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:</p>\n   <ul>\n       <li>Vertical scrolling content at a width equivalent to 320 <a>CSS pixels</a>;</li>\n       <li>Horizontal scrolling content at a height equivalent to 256 <a>CSS pixels</a>.</li>\n   </ul>\n   <p>Except for parts of the content which require two-dimensional layout for usage or meaning.</p>\n  \n  <p class=\"note\">320 CSS pixels is equivalent to a starting <a>viewport</a> width of 1280 CSS pixels wide at 400% zoom. For web content which is designed to scroll horizontally (e.g., with vertical text), 256 CSS pixels is equivalent to a starting viewport height of 1024 CSS pixels at 400% zoom.</p>\n   \n   <p class=\"note\">Examples of content which requires two-dimensional layout are images required for understanding (such as maps and diagrams), video, games, presentations, data tables (not individual cells), and interfaces where it is necessary to keep toolbars in view while manipulating content. It is acceptable to provide two-dimensional scrolling for such parts of the content.</p>\n   \t\t\t\t\n</section>"
+    },
+    {
+      "id": "status-messages",
+      "version": "21",
+      "level": "AA",
+      "title": "Status Messages",
+      "content": "<section id=\"status-messages\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Status Messages</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AA</p>\n   \t\t\t\t\t\n   <p>In content implemented using markup languages, <a>status messages</a> can be <a>programmatically determined</a> through <a>role</a> or properties such that they can be presented to the user by <a>assistive technologies</a> without receiving focus.</p>\n   \t\t\t\t\n</section>"
+    },
+    {
+      "id": "target-size-enhanced",
+      "version": "21",
+      "level": "AAA",
+      "title": "Target Size (Enhanced)",
+      "content": "<section id=\"target-size-enhanced\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Target Size (Enhanced)</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AAA</p>\n   \t\t\t\t\t\n  <p>The size of the <a>target</a> for <a>pointer inputs</a> is at least 44 by 44 <a>CSS pixels</a> except when:</p>\n<dl>\n\t<dt>Equivalent</dt> \n  <dd>The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;</dd>\n\t<dt>Inline</dt> \n  <dd>The target is in a sentence or <a>block of text</a>;</dd>\n\t<dt>User Agent Control</dt> \n  <dd>The size of the target is determined by the <a>user agent</a> and is not modified by the author;</dd>\n\t<dt>Essential</dt> \n  <dd>A particular <a>presentation</a> of the target is <a>essential</a> to the information being conveyed.</dd>\n</dl>  \n   \n</section>"
+    },
+    {
+      "id": "text-spacing",
+      "version": "21",
+      "level": "AA",
+      "title": "Text Spacing",
+      "content": "<section id=\"text-spacing\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Text Spacing</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AA</p>\n   \t\t\t\t\t\n   <p>In content implemented using markup languages that support the following <a>text</a> <a>style properties</a>, no loss of content or functionality occurs by setting all of the following and by changing no other style property:</p>\n   \n   <ul>\n     <li>Line height (line spacing) to at least 1.5 times the font size;</li>\n     <li>Spacing following paragraphs to at least 2 times the font size;</li>\n     <li>Letter spacing (tracking) to at least 0.12 times the font size;</li>\n     <li>Word spacing to at least 0.16 times the font size.</li>\n   </ul>\n \n <p>Exception: <a>Human languages</a> and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.</p>\n\n <p class=\"note\">Content is not required to use these text spacing values. The requirement is to ensure that when a user overrides the authored text spacing, content or functionality is not lost.</p>\n\n <p class=\"note\">Writing systems for some languages use different text spacing settings, such as paragraph start indent. Authors are encouraged to follow locally available guidance for improving readability and legibility of text in their writing system.</p>\n \n</section>"
+    },
+    {
+      "id": "timeouts",
+      "version": "21",
+      "level": "AAA",
+      "title": "Timeouts",
+      "content": "<section id=\"timeouts\" class=\"sc\">\n   \t\t\t\t\t\n   <h4>Timeouts</h4>\n   \t\t\t\t\t\n   <p class=\"conformance-level\">AAA</p>\n   \t\t\t\t\t\n   <p>Users are warned of the duration of any <a>user inactivity</a> that could cause data loss, unless the data is preserved for more than 20 hours when the user does not take any actions.</p>\n  \n<p class=\"note\">Privacy regulations may require explicit user consent before user identification has been authenticated and before user data is preserved. In cases where the user is a minor, explicit consent may not be solicited in most jurisdictions, countries or regions. Consultation with privacy professionals and legal counsel is advised when considering data preservation as an approach to satisfy this success criterion.</p>\n  \n</section>"
+    },
+    {
+      "id": "accessible-authentication-enhanced",
+      "version": "22",
+      "level": "AAA",
+      "title": "Accessible Authentication (Enhanced)",
+      "content": "<section id=\"accessible-authentication-enhanced\" class=\"sc new\">\n   \n    <h4>Accessible Authentication (Enhanced)</h4>\n    \n    <p class=\"conformance-level\">AAA</p>\n\t<p class=\"change\">New</p>\n    \n    <p>A <a>cognitive function test</a> (such as remembering a password or solving a puzzle) is not required for any step in an authentication <a>process</a> unless that step provides at least one of the following:</p> \n    <dl>\n        <dt>Alternative</dt>\n        <dd>Another authentication method that does not rely on a cognitive function test.</dd>\n        <dt>Mechanism</dt>\n        <dd>A <a>mechanism</a> is available to assist the user in completing the cognitive function test.</dd>\n    </dl>\n    \n </section>"
+    },
+    {
+      "id": "accessible-authentication-minimum",
+      "version": "22",
+      "level": "AA",
+      "title": "Accessible Authentication (Minimum)",
+      "content": "<section id=\"accessible-authentication-minimum\" class=\"sc new\">\n   \n    <h4>Accessible Authentication (Minimum)</h4>\n    \n    <p class=\"conformance-level\">AA</p>\n\t<p class=\"change\">New</p>\n    \n    <p>A <a>cognitive function test</a> (such as remembering a password or solving a puzzle) is not required for any step in an authentication <a>process</a> unless that step provides at least one of the following:</p> \n    <dl>\n        <dt>Alternative</dt>\n        <dd>Another authentication method that does not rely on a cognitive function test.</dd>\n        <dt>Mechanism</dt>\n      <dd>A <a>mechanism</a> is available to assist the user in completing the cognitive function test.</dd>\n        <dt>Object Recognition</dt>\n        <dd>The cognitive function test is to recognize objects.</dd>\n        <dt>Personal Content</dt>\n      <dd>The cognitive function test is to identify <a>non-text content</a> the user provided to the website.</dd>\n    </dl>\n\n    <p class=\"note\">\"Object recognition\" and \"Personal content\" may be represented by images, video, or audio.</p>\n    <div class=\"note\">Examples of mechanisms that satisfy this criterion include:\n        <ul>\n            <li>support for password entry by password managers to reduce memory need, and</li>\n            <li>copy and paste to reduce the cognitive burden of re-typing.</li>\n        </ul>\n    </div>\n    \n </section>"
+    },
+    {
+      "id": "consistent-help",
+      "version": "22",
+      "level": "A",
+      "title": "Consistent Help",
+      "content": "<section id=\"consistent-help\" class=\"sc new\">\n   \n    <h4>Consistent Help</h4>\n    \n    <p class=\"conformance-level\">A</p>\n\t<p class=\"change\">New</p>\n    \n  <p>If a <a>web page</a> contains any of the following help <a>mechanisms</a>, and those mechanisms are repeated on multiple web pages within a <a>set of web pages</a>, they occur in the same order relative to other page content, unless a change is initiated by the user:</p>\n\n    <ul>\n        <li>Human contact details;</li>\n        <li>Human contact mechanism;</li>\n        <li>Self-help option;</li>\n        <li>A fully automated contact mechanism.</li>\n    </ul>\n\n  <p class=\"note\">Help mechanisms may be provided directly on the page, or may be provided via a direct link to a different page containing the information.</p>\n  <p class=\"note\">For this success criterion, \"the same order relative to other page content\" can be thought of as how the content is ordered when the page is serialized. The visual position of a help mechanism is likely to be consistent across pages for the same page variation (e.g., CSS break-point). The user can initiate a change, such as changing the page's zoom or orientation, which may trigger a different page variation. This criterion is concerned with relative order across pages displayed in the same page variation (e.g., same zoom level and orientation).</p>\n\n </section>"
+    },
+    {
+      "id": "dragging-movements",
+      "version": "22",
+      "level": "AA",
+      "title": "Dragging Movements",
+      "content": "<section id=\"dragging-movements\" class=\"sc new\">\n   \n    <h4>Dragging Movements</h4>\n    \n    <p class=\"conformance-level\">AA</p>\n\t<p class=\"change\">New</p>\n    \n  <p>All <a>functionality</a> that uses a <a>dragging movement</a> for operation can be achieved by a <a>single pointer</a> without dragging, unless dragging is <a>essential</a> or the functionality is determined by the <a>user agent</a> and not modified by the author.</p>\n    <p class=\"note\">This requirement applies to web content that interprets pointer actions (i.e., this does not apply to actions that are required to operate the user agent or assistive technology).</p>\n   \n </section>"
+    },
+    {
+      "id": "focus-appearance",
+      "version": "22",
+      "level": "AAA",
+      "title": "Focus Appearance",
+      "content": "<section id=\"focus-appearance\" class=\"sc new\">\n    <h4>Focus Appearance</h4>\n\n    <p class=\"conformance-level\">AAA</p>\n\t<p class=\"change\">New</p>\n\n    <p>When the keyboard <a>focus indicator</a> is visible, an area of the focus indicator meets all the following:</p>\n    <ul>\n        <li>is at least as large as the area of a 2 <a>CSS pixel</a> thick <a>perimeter</a> of the unfocused component or sub-component, and</li>\n        <li>has a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused states.</li>\n    </ul>\n\n    <p>Exceptions:</p>\n    <ul>\n        <li>The focus indicator is determined by the <a>user agent</a> and cannot be adjusted by the author, or</li>\n        <li>The focus indicator and the indicator's background color are not modified by the author.</li>\n    </ul>\n\n    <p class=\"note\">What is perceived as the user interface component or sub-component (to determine the perimeter) depends on its visual <a>presentation</a>. The visual presentation includes the component's visible <a>content</a>, border, and component-specific background. It does not include shadow and glow effects outside the component's content, background, or border.</p>\n\n    <p class=\"note\">Examples of sub-components that may receive a focus indicator are menu items in an opened drop-down menu, or focusable cells in a grid.</p>\n\n    <p class=\"note\">Contrast calculations can be based on colors defined within the <a>technology</a> (such as HTML, CSS, and SVG). Pixels modified by user agent resolution enhancements and anti-aliasing can be ignored.</p>\n\n</section>"
+    },
+    {
+      "id": "focus-not-obscured-enhanced",
+      "version": "22",
+      "level": "AAA",
+      "title": "Focus Not Obscured (Enhanced)",
+      "content": "<section id=\"focus-not-obscured-enhanced\" class=\"sc new\">\n   \n    <h4>Focus Not Obscured (Enhanced)</h4>\n    \n    <p class=\"conformance-level\">AAA</p>\n\t<p class=\"change\">New</p>\n    \n    <p>When a <a>user interface component</a> receives keyboard focus, no part of the component is hidden by author-created content.</p>\n\n\n </section>"
+    },
+    {
+      "id": "focus-not-obscured-minimum",
+      "version": "22",
+      "level": "AA",
+      "title": "Focus Not Obscured (Minimum)",
+      "content": "<section id=\"focus-not-obscured-minimum\" class=\"sc new\">\n   \n    <h4>Focus Not Obscured (Minimum)</h4>\n    \n    <p class=\"conformance-level\">AA</p>\n\t<p class=\"change\">New</p>\n    \n    <p>When a <a>user interface component</a> receives keyboard focus, the component is not entirely hidden due to author-created content.</p>\n\n    <p class=\"note\">Where content in a configurable interface can be repositioned by the user, then only the initial positions of user-movable content are considered for testing and conformance of this success criterion.</p>\n\n    <p class=\"note\">Content opened by the <em>user</em> may obscure the component receiving focus. If the user can reveal the focused component without advancing the keyboard focus, the component with focus is not considered visually hidden due to author-created content.</p>\n\n </section>"
+    },
+    {
+      "id": "redundant-entry",
+      "version": "22",
+      "level": "A",
+      "title": "Redundant Entry",
+      "content": "<section id=\"redundant-entry\" class=\"sc new\">\n   \n    <h4>Redundant Entry</h4>\n    \n    <p class=\"conformance-level\">A</p>\n\t<p class=\"change\">New</p>\n    \n    <p>Information previously entered by or provided to the user that is required to be entered again in the same <a>process</a> is either:</p>\n\n    <ul>\n        <li>auto-populated, or</li>\n        <li>available for the user to select.</li>\n    </ul>\n    <p>Except when:</p> \n    <ul>\n        <li>re-entering the information is <a>essential</a>,</li>\n        <li>the information is required to ensure the security of the content, or</li>\n        <li>previously entered information is no longer valid.</li>\n    </ul>\n\n </section>"
+    },
+    {
+      "id": "target-size-minimum",
+      "version": "22",
+      "level": "AA",
+      "title": "Target Size (Minimum)",
+      "content": "<section id=\"target-size-minimum\" class=\"sc new\">\n   \n    <h4>Target Size (Minimum)</h4>\n    \n    <p class=\"conformance-level\">AA</p>\n\t  <p class=\"change\">New</p>\n    \n    <p>The size of the <a>target</a> for <a>pointer inputs</a> is at least 24 by 24 <a>CSS pixels</a>, except when:</p>\n    <dl>\n        <dt>Spacing</dt>\n        <dd>Undersized targets (those less than 24 by 24 CSS pixels) are positioned so that if a 24 CSS pixel diameter circle is centered on the <a>bounding box</a> of each, the circles do not intersect another target or the circle for another undersized target;</dd>\n        <dt>Equivalent</dt> \n        <dd>The function can be achieved through a different control on the same page that meets this criterion;</dd>\n        <dt>Inline</dt> \n        <dd>The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;</dd>\n        <dt>User Agent Control</dt> \n        <dd>The size of the target is determined by the <a>user agent</a> and is not modified by the author;</dd>\n        <dt>Essential</dt> \n        <dd>A particular <a>presentation</a> of the target is <a>essential</a> or is legally required for the information being conveyed.</dd>\n    </dl>\n    <p class=\"note\">Targets that allow for values to be selected spatially based on position within the target are considered one target for the purpose of the success criterion. Examples include sliders, color pickers displaying a gradient of colors, or editable areas where you position the cursor.</p>\n    <p class=\"note\">For inline targets the line-height should be interpreted as perpendicular to the flow of text. For example, in a language displayed vertically, the line-height would be horizontal.</p>\n\n</section>"
+    }
+  ],
+  "count": 88,
+  "generatedAt": "2025-04-07T09:43:10.308Z"
+}
