@@ -175,7 +175,7 @@ class WcagServer {
           uri: 'wcag://principles-guidelines',
           name: 'WCAG Principles and Guidelines',
           mimeType: 'text/markdown',
-          description: 'The principles and guidelines of WCAG',
+          description: 'The principles and guidelines of WCAG, including a hierarchical structure of principles, guidelines, and success criteria with their IDs. This resource provides all success criterion IDs needed for accessing specific criteria and understanding documents.',
         },
       ],
     }));
@@ -187,19 +187,19 @@ class WcagServer {
           uriTemplate: 'wcag://criteria/{criterion-id}',
           name: 'WCAG Success Criterion',
           mimeType: 'text/markdown',
-          description: 'A specific WCAG success criterion',
+          description: 'A specific WCAG success criterion with detailed requirements. Note: You need to first check wcag://principles-guidelines to find the criterion ID you need.',
         },
         {
           uriTemplate: 'wcag://understanding/{criterion-id}',
           name: 'WCAG Understanding Document',
           mimeType: 'text/markdown',
-          description: 'Understanding document for a specific WCAG success criterion',
+          description: 'Understanding document for a specific WCAG success criterion, providing detailed explanations, examples, and implementation guidance. Note: You need to first check wcag://principles-guidelines to find the criterion ID you need.',
         },
         {
           uriTemplate: 'wcag://techniques/{technique-id}',
           name: 'WCAG Technique',
           mimeType: 'text/markdown',
-          description: 'A specific WCAG technique',
+          description: 'A specific WCAG technique that provides detailed implementation guidance for meeting success criteria. Techniques are categorized by technology (HTML, CSS, ARIA, etc.) and identified by prefixes in their IDs.',
         },
       ],
     }));
