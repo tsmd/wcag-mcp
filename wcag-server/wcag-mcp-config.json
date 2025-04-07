@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "wcag-server": {
+      "command": "node",
+      "args": [
+        "${PROJECT_PATH}/wcag-server/build/index.js"
+      ],
+      "env": {
+        "WCAG_PATH": "${PROJECT_PATH}/wcag"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
