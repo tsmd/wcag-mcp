@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Path to the server executable
-const serverPath = join(__dirname, 'build', 'index.js');
+const serverPath = join(__dirname, 'wcag-server.js');
 
 // Start the server process
 console.log('Starting WCAG MCP server...');
