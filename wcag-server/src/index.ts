@@ -22,6 +22,8 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import * as fs from "fs";
 import * as path from "path";
+import TurndownService from "turndown";
+import { JSDOM } from "jsdom";
 
 /**
  * WCAG MCP Server implementation
@@ -29,10 +31,20 @@ import * as path from "path";
 class WcagServer {
   private server: Server;
   private wcagBasePath: string;
+  private turndownService: any; // TurndownService instance
 
   constructor() {
     // Get the WCAG path from environment variable or use default relative path
     this.wcagBasePath = process.env.WCAG_PATH || '../wcag';
+    
+    // Initialize Turndown service for HTML to Markdown conversion
+    this.turndownService = new TurndownService({
+      headingStyle: 'atx',       // Use # style headings
+      codeBlockStyle: 'fenced',  // Use ``` style code blocks
+      bulletListMarker: '-',     // Use - for bullet lists
+      emDelimiter: '*',          // Use * for emphasis
+      strongDelimiter: '**'      // Use ** for strong
+    });
     
     // Create the MCP server
     this.server = new Server(
@@ -55,6 +67,50 @@ class WcagServer {
   }
 
   /**
+   * Convert HTML to Markdown
+   */
+  private convertHtmlToMarkdown(html: string): string {
+    return this.turndownService.turndown(html);
+  }
+
+  /**
+   * Extract principles, guidelines, and success criteria from guidelines/index.html
+   */
+  private extractGuidelinesContent(html: string): string {
+    try {
+      console.error('[HTML] Extracting principles, guidelines, and success criteria');
+      const dom = new JSDOM(html);
+      const document = dom.window.document;
+      
+      // Create a new document fragment to hold our extracted content
+      const fragment = document.createDocumentFragment();
+      
+      // Extract all principle sections
+      const principles = document.querySelectorAll('section.principle');
+      
+      principles.forEach(principle => {
+        // Clone the principle to avoid modifying the original
+        const principleClone = principle.cloneNode(true);
+        fragment.appendChild(principleClone);
+      });
+      
+      // Create a new HTML document with just the extracted content
+      const extractedHtml = `
+        <html>
+          <body>
+            ${Array.from(fragment.childNodes).map(node => (node as Element).outerHTML).join('')}
+          </body>
+        </html>
+      `;
+      
+      return extractedHtml;
+    } catch (error) {
+      console.error('[HTML] Error extracting content:', error);
+      return html; // Return original HTML if extraction fails
+    }
+  }
+
+  /**
    * Set up resource handlers for WCAG content
    */
   private setupResourceHandlers() {
@@ -64,7 +120,7 @@ class WcagServer {
         {
           uri: 'wcag://principles-guidelines',
           name: 'WCAG Principles and Guidelines',
-          mimeType: 'text/html',
+          mimeType: 'text/markdown',
           description: 'The principles and guidelines of WCAG',
         },
       ],
@@ -76,19 +132,19 @@ class WcagServer {
         {
           uriTemplate: 'wcag://criteria/{criterion-id}',
           name: 'WCAG Success Criterion',
-          mimeType: 'text/html',
+          mimeType: 'text/markdown',
           description: 'A specific WCAG success criterion',
         },
         {
           uriTemplate: 'wcag://understanding/{criterion-id}',
           name: 'WCAG Understanding Document',
-          mimeType: 'text/html',
+          mimeType: 'text/markdown',
           description: 'Understanding document for a specific WCAG success criterion',
         },
         {
           uriTemplate: 'wcag://techniques/{technique-id}',
           name: 'WCAG Technique',
-          mimeType: 'text/html',
+          mimeType: 'text/markdown',
           description: 'A specific WCAG technique',
         },
       ],
@@ -103,13 +159,26 @@ class WcagServer {
         
         // Handle principles and guidelines
         if (uri === 'wcag://principles-guidelines') {
-          const content = await this.readPrinciplesAndGuidelines();
+          const htmlContent = await this.readPrinciplesAndGuidelines();
+          console.error('[Conversion] Extracting and converting principles and guidelines to Markdown');
+          
+          // Extract only the principles, guidelines, and success criteria
+          const extractedHtml = this.extractGuidelinesContent(htmlContent);
+          
+          // Convert to Markdown
+          const markdownContent = this.convertHtmlToMarkdown(extractedHtml);
+          
+          console.error(`[Conversion] Original HTML size: ${htmlContent.length} bytes`);
+          console.error(`[Conversion] Extracted HTML size: ${extractedHtml.length} bytes`);
+          console.error(`[Conversion] Markdown size: ${markdownContent.length} bytes`);
+          console.error(`[Conversion] Size reduction: ${((htmlContent.length - markdownContent.length) / htmlContent.length * 100).toFixed(2)}%`);
+          
           return {
             contents: [
               {
                 uri,
-                mimeType: 'text/html',
-                text: content,
+                mimeType: 'text/markdown',
+                text: markdownContent,
               },
             ],
           };
@@ -120,13 +189,18 @@ class WcagServer {
         if (criteriaMatch) {
           const [, criterionId] = criteriaMatch;
           console.error(`[Criteria] ID: ${criterionId}`);
-          const content = await this.findCriterion(criterionId);
+          const htmlContent = await this.findCriterion(criterionId);
+          
+          // Convert to Markdown
+          console.error('[Conversion] Converting success criterion to Markdown');
+          const markdownContent = this.convertHtmlToMarkdown(htmlContent);
+          
           return {
             contents: [
               {
                 uri,
-                mimeType: 'text/html',
-                text: content,
+                mimeType: 'text/markdown',
+                text: markdownContent,
               },
             ],
           };
@@ -137,13 +211,18 @@ class WcagServer {
         if (understandingMatch) {
           const [, criterionId] = understandingMatch;
           console.error(`[Understanding] ID: ${criterionId}`);
-          const content = await this.findUnderstanding(criterionId);
+          const htmlContent = await this.findUnderstanding(criterionId);
+          
+          // Convert to Markdown
+          console.error('[Conversion] Converting understanding document to Markdown');
+          const markdownContent = this.convertHtmlToMarkdown(htmlContent);
+          
           return {
             contents: [
               {
                 uri,
-                mimeType: 'text/html',
-                text: content,
+                mimeType: 'text/markdown',
+                text: markdownContent,
               },
             ],
           };
@@ -154,13 +233,18 @@ class WcagServer {
         if (techniqueMatch) {
           const [, techniqueId] = techniqueMatch;
           console.error(`[Technique] ID: ${techniqueId}`);
-          const content = await this.findTechnique(techniqueId);
+          const htmlContent = await this.findTechnique(techniqueId);
+          
+          // Convert to Markdown
+          console.error('[Conversion] Converting technique to Markdown');
+          const markdownContent = this.convertHtmlToMarkdown(htmlContent);
+          
           return {
             contents: [
               {
                 uri,
-                mimeType: 'text/html',
-                text: content,
+                mimeType: 'text/markdown',
+                text: markdownContent,
               },
             ],
           };
