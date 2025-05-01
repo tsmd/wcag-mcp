@@ -8,6 +8,9 @@
     "wcag-server": "./wcag-server.js"
   },
   "files": [
+    "README.md",
+    "wcag-criteria.json",
+    "wcag-mcp-config.json",
     "wcag-server.js"
   ],
   "scripts": {
