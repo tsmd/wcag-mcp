@@ -22,8 +22,12 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from 'url';
 import TurndownService from "turndown";
 import { JSDOM } from "jsdom";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * WCAG MCP Server implementation
@@ -80,7 +84,7 @@ class WcagServer {
       // Load criteria data
       let criteriaData = {};
       try {
-        const criteriaPath = path.join(process.cwd(), 'wcag-criteria.json');
+        const criteriaPath = path.join(__dirname, 'wcag-criteria.json');
         console.error(`[Criteria] Loading criteria data from: ${criteriaPath}`);
         const criteriaJson = fs.readFileSync(criteriaPath, 'utf-8');
         criteriaData = JSON.parse(criteriaJson);
