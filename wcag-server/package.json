@@ -5,27 +5,18 @@
   "private": true,
   "type": "module",
   "bin": {
-    "wcag-server": "./build/index.js"
+    "wcag-server": "./wcag-server.js"
   },
   "files": [
-    "build"
+    "wcag-server.js"
   ],
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "prepare": "npm run build",
-    "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector ./wcag-server.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
     "glob": "^11.0.1",
     "jsdom": "^26.0.0",
     "turndown": "^7.2.0"
-  },
-  "devDependencies": {
-    "@types/jsdom": "^21.1.7",
-    "@types/node": "^20.11.24",
-    "@types/turndown": "^5.0.5",
-    "typescript": "^5.3.3"
   }
 }
